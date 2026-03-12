@@ -4,9 +4,10 @@ import { ProductsService } from '../products.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrl: './product.component.css'
+    selector: 'app-product',
+    templateUrl: './product.component.html',
+    styleUrl: './product.component.css',
+    standalone: false
 })
 export class ProductComponent {
 
