@@ -1,0 +1,95 @@
+<main>
+  <h1>Contactez-nous</h1>
+  <form class="form" [formGroup]="form" action="#" method="post">
+    <div class="form__container">
+      <div class="form__options">
+        <div class="form__option">
+          <label for="last-name">Nom</label>
+          <input type="text" name="last-name" id="last-name" formControlName="lastName">
+        </div>
+        @if (form.get('lastName')?.invalid && (!form.get('lastName')?.pristine || form.get('lastName')?.touched)) {
+          <div>
+            @if (form.get('lastName')?.hasError('required')) {
+              <p class="form__error">Requis</p>
+            }
+            @if (form.get('lastName')?.hasError('maxlength')) {
+              <p class="form__error">20 caractères maximum</p>
+            }
+            @if (form.get('lastName')?.hasError('pattern')) {
+              <p class="form__error">Sont acceptés : les lettres, les accents et le tiret</p>
+            }
+          </div>
+        }
+        <div class="form__option">
+          <label for="first-name">Prénom</label>
+          <input type="text" name="first-name" id="first-name" formControlName="firstName">
+        </div>
+        @if (form.get('firstName')?.invalid && (!form.get('firstName')?.pristine || form.get('firstName')?.touched)) {
+          <div>
+            @if (form.get('firstName')?.hasError('required')) {
+              <p class="form__error">Requis</p>
+            }
+            @if (form.get('firstName')?.hasError('maxlength')) {
+              <p class="form__error">20 caractères maximum</p>
+            }
+            @if (form.get('firstName')?.hasError('pattern')) {
+              <p class="form__error">Sont acceptés : les lettres, les accents et le tiret</p>
+            }
+          </div>
+        }
+        <div class="form__option">
+          <label for="mail">Mail</label>
+          <input type="email" name="mail" id="mail" formControlName="mail">
+        </div>
+        @if (form.get('mail')?.invalid && (!form.get('mail')?.pristine || form.get('mail')?.touched)) {
+          <div>
+            @if (form.get('mail')?.hasError('required')) {
+              <p class="form__error">Requis</p>
+            }
+            @if (form.get('mail')?.hasError('email') && form.get('mail')?.touched) {
+              <p class="form__error">Le mail n'est pas valide</p>
+            }
+          </div>
+        }
+        <div class="form__option">
+          <label for="subject">Sujet</label>
+          <input type="text" name="subject" id="subject" formControlName="subject">
+        </div>
+        @if (form.get('subject')?.invalid && (!form.get('subject')?.pristine || form.get('subject')?.touched)) {
+          <div>
+            @if (form.get('subject')?.hasError('required')) {
+              <p class="form__error">Requis</p>
+            }
+            @if (form.get('subject')?.hasError('maxlength')) {
+              <p class="form__error">60 caractères maximum</p>
+            }
+          </div>
+        }
+      </div>
+      <img class="form__image" src="assets/images/idefix.webp" alt="Dessin d'Idefix en position assise">
+    </div>
+    <div class="form__text-area-container">
+      <label for="message">Message</label>
+      <textarea name="message" id="message" rows="9" formControlName="message"></textarea>
+    </div>
+    @if (form.get('message')?.invalid && (!form.get('message')?.pristine || form.get('message')?.touched)) {
+      <div>
+        @if (form.get('message')?.hasError('required')) {
+          <p class="form__error">Requis</p>
+        }
+        @if (form.get('message')?.hasError('maxlength')) {
+          <p class="form__error">1 000 caractères maximum</p>
+        }
+      </div>
+    }
+    @if (form.invalid) {
+      <button type="button" (click)="sendInvalidForm()">Envoyer</button>
+    }
+    @if (form.valid) {
+      <button type="submit" (click)="sendValidForm()">Envoyer</button>
+    }
+    @if (form.invalid && trySendInvalidForm) {
+      <p class="form__error">Veuillez remplir intégralement le formulaire</p>
+    }
+  </form>
+</main>
