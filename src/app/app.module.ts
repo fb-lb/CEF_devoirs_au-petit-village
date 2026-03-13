@@ -12,7 +12,7 @@ import { SortByPricePipe } from './sort-by-price.pipe';
 import { ProductComponent } from './product/product.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { APP_BASE_HREF } from '@angular/common';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { APP_BASE_HREF } from '@angular/common';
     SortByPricePipe,
     ProductComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
