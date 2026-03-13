@@ -1,30 +1,40 @@
 <!-- Faire un longDescription et remplacer le description par shortDescription dans le service -->
 <main>
-    <h1>Fiche produit</h1>
-    <div>
-        <div class="image-container">
-            <img class="image-container__image" [src]="figurine.imgSrc" [alt]="figurine.imgAlt">
-        </div>
-        <div class="product">
-            <div class="product__up-text">
-                <h2 class="product__title">{{figurine.name}}</h2>
-                <p class="product__description">{{figurine.longDescription}}</p>
-            </div>
-            <div class="product__down-text">
-                <p class="product__price">{{figurine.price.toFixed(2)}} €</p>
-                <form class="product__form" [formGroup]="form" action="#" method="post">
-                    <div class="product__quantity">
-                        <label for="quantity">Quantité</label>
-                        <input type="number" name="quantity" id="quantity" [defaultValue]="1" formControlName="quantity">
-                    </div>
-                    <button *ngIf="form.invalid" type="button" class="product__button">Ajouter au panier</button>
-                    <button *ngIf="form.valid" (click)="sendForm()" type="submit" class="product__button">Ajouter au panier</button>
-                </form>
-                <div *ngIf="form.get('quantity')?.invalid">
-                    <p *ngIf="form.get('quantity')?.hasError('min')" class="product__error">La quantité doit être d'au moins 1</p>
-                    <p *ngIf="form.get('quantity')?.hasError('max')" class="product__error">Chaque commande doit avoir 99 articles maximum</p>
-                </div>
-            </div>
-        </div>
+  <h1>Fiche produit</h1>
+  <div>
+    <div class="image-container">
+      <img class="image-container__image" [src]="figurine.imgSrc" [alt]="figurine.imgAlt">
     </div>
+    <div class="product">
+      <div class="product__up-text">
+        <h2 class="product__title">{{figurine.name}}</h2>
+        <p class="product__description">{{figurine.longDescription}}</p>
+      </div>
+      <div class="product__down-text">
+        <p class="product__price">{{figurine.price.toFixed(2)}} €</p>
+        <form class="product__form" [formGroup]="form" action="#" method="post">
+          <div class="product__quantity">
+            <label for="quantity">Quantité</label>
+            <input type="number" name="quantity" id="quantity" [defaultValue]="1" formControlName="quantity">
+          </div>
+          @if (form.invalid) {
+            <button type="button" class="product__button">Ajouter au panier</button>
+          }
+          @if (form.valid) {
+            <button (click)="sendForm()" type="submit" class="product__button">Ajouter au panier</button>
+          }
+        </form>
+        @if (form.get('quantity')?.invalid) {
+          <div>
+            @if (form.get('quantity')?.hasError('min')) {
+              <p class="product__error">La quantité doit être d'au moins 1</p>
+            }
+            @if (form.get('quantity')?.hasError('max')) {
+              <p class="product__error">Chaque commande doit avoir 99 articles maximum</p>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </div>
 </main>

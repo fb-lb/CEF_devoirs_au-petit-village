@@ -1,0 +1,44 @@
+.not-found {
+    padding: 100px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+
+.not-found__title {
+    font-family: 'Bubbleboddy-Neue-regular', 'Arial', sans-serif;
+    text-align: center;
+}
+
+.not-found__paragraph {
+    font-family: 'Comfortaa', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: calc(1rem + 12px);
+    text-align: center;
+}
+
+.not-found__link {
+    background-color: #151217;
+    color: white;
+    align-self: center;
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    border: 2px solid #151217;
+    font-family: 'Comfortaa', Arial, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 25px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.not-found__link:hover {
+    background-color:white;
+    color:#151217;
+}
+
+.not-found__image {
+    align-self: center;
+    width: 100%;
+    max-width: 865px;
+}

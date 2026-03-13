@@ -1,6 +1,8 @@
 # AuPetitVillage
 
 This project is a e-commerce website of figurines about the adventures of "Astérix et Obélix".
+This project is just the front-end part, it has never been linked to a back-end and database. That's why figurines can't really
+be added to a cart and there isn't a cart page, register/login page or back-office page.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.8.
 
@@ -15,6 +17,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+In package.json build script, modify the url base href or delete it if you don't need one. 
 
 ## Running unit tests
 
