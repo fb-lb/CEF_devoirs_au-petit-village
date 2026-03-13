@@ -4,17 +4,15 @@
   <meta charset="UTF-8">
   <title>Redirecting...</title>
   <script>
-    // Ton base href Angular
+   // Ne pas ajouter index.html si déjà présent
     const baseHref = '/CEF_devoirs_au-petit-village/';
-
-    // Récupère la partie après ton repo dans l'URL
-    const fullPath = window.location.pathname + window.location.search + window.location.hash;
-
-    // Si l'URL commence par ton base href, on enlève cette partie pour Angular
-    let relativePath = fullPath.startsWith(baseHref) ? fullPath.substring(baseHref.length) : fullPath;
-
-    // Redirige vers index.html avec le chemin exact
-    window.location.replace(baseHref + 'index.html' + relativePath);
+    const currentPath = window.location.pathname + window.location.search + window.location.hash;
+    
+    if (!currentPath.includes('index.html')) {
+      // Supprime le / de fin si présent
+      const cleanBase = baseHref.endsWith('/') ? baseHref.slice(0, -1) : baseHref;
+      window.location.replace(cleanBase + '/index.html' + currentPath.substring(cleanBase.length));
+    }
   </script>
 </head>
 <body>
