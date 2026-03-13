@@ -31,7 +31,7 @@ import { APP_BASE_HREF } from '@angular/common';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [ { provide: APP_BASE_HREF, useValue: '/CEF_devoirs_au-petit-village/' } ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

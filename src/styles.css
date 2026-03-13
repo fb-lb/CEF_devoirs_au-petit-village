@@ -3,37 +3,37 @@
 
 @font-face {
     font-family: "Bubbleboddy-Neue-thin";
-    src: url('/assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Thin-Trial.woff') format('woff'),
-         url('/assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Thin-Trial.otf') format('opentype'),
-         url('/assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Thin-Trial.ttf') format('truetype');
+    src: url('assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Thin-Trial.woff') format('woff'),
+         url('assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Thin-Trial.otf') format('opentype'),
+         url('assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Thin-Trial.ttf') format('truetype');
 }
 
 @font-face {
     font-family: "Bubbleboddy-Neue-light";
-    src: url('/assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Light-Trial.woff') format('woff'),
-         url('/assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Light-Trial.otf') format('opentype'),
-         url('/assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Light-Trial.ttf') format('truetype');
+    src: url('assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Light-Trial.woff') format('woff'),
+         url('assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Light-Trial.otf') format('opentype'),
+         url('assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Light-Trial.ttf') format('truetype');
 }
 
 @font-face {
     font-family: "Bubbleboddy-Neue-regular";
-    src: url('/assets/fonts/bubbleboddy_neue/bubbleboddyneue-regular-trial.woff') format('woff'),
-         url('/assets/fonts/bubbleboddy_neue/bubbleboddyneue-regular-trial.otf') format('opentype'),
-         url('/assets/fonts/bubbleboddy_neue/bubbleboddyneue-regular-trial.ttf') format('truetype');
+    src: url('assets/fonts/bubbleboddy_neue/bubbleboddyneue-regular-trial.woff') format('woff'),
+         url('assets/fonts/bubbleboddy_neue/bubbleboddyneue-regular-trial.otf') format('opentype'),
+         url('assets/fonts/bubbleboddy_neue/bubbleboddyneue-regular-trial.ttf') format('truetype');
 }
 
 @font-face {
     font-family: "Bubbleboddy-Neue-bold";
-    src: url('/assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Bold-Trial.woff') format('woff'),
-         url('/assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Bold-Trial.otf') format('opentype'),
-         url('/assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Bold-Trial.ttf') format('truetype');
+    src: url('assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Bold-Trial.woff') format('woff'),
+         url('assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Bold-Trial.otf') format('opentype'),
+         url('assets/fonts/bubbleboddy_neue/BubbleboddyNeue-Bold-Trial.ttf') format('truetype');
 }
 
 @font-face {
     font-family: "Bubbleboddy-Neue-extra-bold";
-    src: url('/assets/fonts/bubbleboddy_neue/BubbleboddyNeue-ExtraBold-Trial.woff') format('woff'),
-         url('/assets/fonts/bubbleboddy_neue/BubbleboddyNeue-ExtraBold-Trial.otf') format('opentype'),
-         url('/assets/fonts/bubbleboddy_neue/BubbleboddyNeue-ExtraBold-Trial.ttf') format('truetype');
+    src: url('assets/fonts/bubbleboddy_neue/BubbleboddyNeue-ExtraBold-Trial.woff') format('woff'),
+         url('assets/fonts/bubbleboddy_neue/BubbleboddyNeue-ExtraBold-Trial.otf') format('opentype'),
+         url('assets/fonts/bubbleboddy_neue/BubbleboddyNeue-ExtraBold-Trial.ttf') format('truetype');
 }
 
 body {
