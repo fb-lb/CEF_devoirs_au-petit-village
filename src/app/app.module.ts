@@ -12,6 +12,7 @@ import { SortByPricePipe } from './sort-by-price.pipe';
 import { ProductComponent } from './product/product.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { ContactComponent } from './contact/contact.component';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ { provide: APP_BASE_HREF, useValue: '/CEF_devoirs_au-petit-village/' } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

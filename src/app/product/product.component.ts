@@ -25,7 +25,7 @@ export class ProductComponent {
   })
 
   sendForm() {
-    alert("Merci, nous avon bien ajouté votre commande à votre panier");
+    alert("Merci, nous avons bien ajouté votre commande à votre panier");
     this.form.reset({ quantity: 1 });
   }
 }
